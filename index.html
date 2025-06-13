@@ -7,84 +7,55 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #FAF7F2;
+      font-family: 'Georgia', serif;
+      background-color: #f0ede7;
       color: #333;
     }
-    header, footer {
-      background-color: #2F5D3E;
-      color: white;
+    header {
+      background-color: #e3e0d9;
       padding: 1rem 2rem;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
     }
     header img {
       height: 60px;
-      margin-bottom: 0.5rem;
     }
     nav a {
       margin: 0 1rem;
-      color: white;
+      color: #000;
       text-decoration: none;
+      font-weight: 500;
+    }
+    .cta-button {
+      background-color: #2f5d3e;
+      color: white;
+      padding: 0.6rem 1rem;
+      text-decoration: none;
+      border-radius: 3px;
       font-weight: bold;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce') center/cover no-repeat;
-      height: 60vh;
-      color: white;
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
     }
-    .hero h1 {
-      font-size: 3rem;
-      background-color: rgba(47,93,62,0.7);
-      padding: 1rem;
+    .hero-text {
+      max-width: 50%;
     }
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
     }
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      flex: 1 1 250px;
-      max-width: 300px;
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    input, textarea, button {
-      padding: 0.7rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background-color: #2F5D3E;
-      color: white;
-      border: none;
-      cursor: pointer;
+    .hero-img img {
+      width: 400px;
+      height: auto;
+      border-radius: 200px 0 0 200px;
     }
   </style>
 </head>
@@ -92,37 +63,23 @@
   <header>
     <img src="Logo W.png" alt="Greenlinx Logo">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="#about">Who We Are</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">Who We Are</a>
+      <a href="#">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#" class="cta-button">Contact Us</a>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h1>Premium Egyptian Produce — Fresh & Frozen for the World</h1>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Fresh & Frozen Produce — Expertly Delivered</h1>
+      <p>Take a minute to write an introduction that is short, sweet, and to the point. If you sell something, use this space to describe it in detail and tell us why we should make a purchase. Tap into your creativity. You've got this.</p>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1582284560600-f8d5c1619a7e" alt="Oranges">
+    </div>
   </section>
-
-  <section class="section" id="about">
-    <h2>Who We Are</h2>
-    <p>Greenlinx is an Egypt-based export business specializing in premium fruits and vegetables — both fresh and frozen. We serve clients across Europe, the Gulf, and Africa with quality-assured produce, strong cold chain logistics, and a commitment to consistency.</p>
-    <p>Our sourcing network includes trusted farms in the Nile Delta and Upper Egypt, and we deliver tailored solutions for every client — from bulk shipping to custom-packaged exports.</p>
-  </section>
-
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/your_form_id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="company" placeholder="Company Name">
-      <textarea name="message" placeholder="What are you looking for?" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>You can also email us directly at <strong>contact@greenlinx.com</strong></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Greenlinx. All rights reserved.</p>
-  </footer>
 </body>
 </html>
