@@ -35,10 +35,26 @@
       font-weight: bold;
     }
     .about-section {
-      background: url('https://images.unsplash.com/photo-1592928305300-fdb5b8916c3d') center/cover no-repeat;
+      background: url('images/ship.avif') center/cover no-repeat;
       color: white;
       padding: 6rem 2rem;
       text-align: center;
+      position: relative;
+    }
+    .about-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .about-section h1,
+    .about-section p {
+      position: relative;
+      z-index: 1;
     }
     .about-section h1 {
       font-size: 3rem;
@@ -60,9 +76,10 @@
     <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo"></a>
     <nav>
       <a href="index.html">Home</a>
+      <a href="about.html">Who We Are</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
-      <a href="partner.html">Become a Partner</a>
+      <a href="contact.html">Contact</a>
       <a href="contact.html" class="cta-button">Contact Us</a>
     </nav>
   </header>
@@ -70,7 +87,7 @@
   <section class="about-section">
     <h1>About Greenlinx</h1>
     <p>
-      Greenlinx exists to elevate Egypt’s agricultural potential and connect it to the world. We work hand-in-hand with trusted farmers and producers to export the highest quality fruits and vegetables across the Gulf, Europe, and Africa. With a sharp focus on freshness, logistics, and long-term partnerships, we are building the next-generation export platform. Our goal is to lead the export sector in Egypt—not just in agriculture, but across the full spectrum of food products. Greenlinx is not just a middleman—we are a growth partner for producers and a reliability hub for buyers.
+      Greenlinx exists to elevate Egypt’s agricultural potential and connect it to the world. We work hand-in-hand with trusted farmers and producers to export the highest quality fruits and vegetables across the Gulf, Europe, and Africa. With a sharp focus on freshness, logistics, and long-term farmer partnerships, we are building the next-generation export platform. Our goal is to lead the export sector in Egypt—not just in agriculture, but across the full spectrum of food products. Greenlinx is not just a middleman—we are a growth partner for producers and a reliability hub for buyers.
     </p>
   </section>
 </body>
