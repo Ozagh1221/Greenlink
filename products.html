@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Greenlinx</title>
+  <title>Greenlinx | Our Products</title>
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
+      background-color: #f0ede7;
       color: #333;
     }
 
@@ -15,8 +16,8 @@
       background-color: #e3e0d9;
       padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       position: relative;
       z-index: 1000;
     }
@@ -27,8 +28,8 @@
 
     nav {
       display: flex;
-      gap: 1.5rem;
       align-items: center;
+      gap: 1.5rem;
     }
 
     nav a {
@@ -40,9 +41,9 @@
     .cta-button {
       background-color: #2f5d3e;
       color: white;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
+      padding: 0.6rem 1rem;
       border-radius: 3px;
+      text-decoration: none;
       font-weight: bold;
     }
 
@@ -93,44 +94,35 @@
       cursor: pointer;
     }
 
-    .about-section {
-      background: url('images/ship.avif') center/cover no-repeat;
-      color: white;
-      padding: 6rem 2rem;
-      text-align: center;
-      position: relative;
+    .section {
+      padding: 2rem;
     }
 
-    .about-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
     }
 
-    .about-section h1,
-    .about-section p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-section h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .about-section p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.7;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 1rem;
+    .card {
+      background: white;
       border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 300px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-top: 1rem;
     }
 
     @media (max-width: 768px) {
@@ -142,13 +134,13 @@
         display: flex;
       }
 
-      .about-section h1 {
-        font-size: 2rem;
+      .products {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .about-section p {
-        font-size: 1rem;
-        padding: 1rem 1rem;
+      .card {
+        width: 90%;
       }
     }
   </style>
@@ -157,7 +149,7 @@
 
   <header>
     <div class="logo">
-      <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
+      <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo"></a>
     </div>
 
     <nav>
@@ -185,11 +177,45 @@
     <a href="contact.html" class="cta-button">Contact Us</a>
   </div>
 
-  <section class="about-section">
-    <h1>About Greenlinx</h1>
-    <p>
-      Greenlinx exists to elevate Egypt’s agricultural potential and connect it to the world. We work hand-in-hand with trusted farmers and producers to export the highest quality fruits and vegetables across the Gulf, Europe, and Africa. With a sharp focus on freshness, logistics, and long-term farmer partnerships, we are building the next-generation export platform. Our goal is to lead the export sector in Egypt—not just in agriculture, but across the full spectrum of food products. Greenlinx is not just a middleman—we are a growth partner for producers and a reliability hub for buyers.
-    </p>
+  <section class="section">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="card">
+        <img src="images/Oranges.avif" alt="Oranges">
+        <h3>Oranges</h3>
+        <p>Egyptian Valencia oranges, juicy and sweet. Exported in bulk cartons, ideal for juice or retail.</p>
+      </div>
+      <div class="card">
+        <img src="images/Potatoes.avif" alt="Potatoes">
+        <h3>Potatoes</h3>
+        <p>High-quality Egyptian potatoes, washed and graded for international export. Multiple sizes available.</p>
+      </div>
+      <div class="card">
+        <img src="images/Onions.avif" alt="Onions">
+        <h3>Onions</h3>
+        <p>Golden and red onions, freshly harvested. Exported in mesh bags with long shelf life.</p>
+      </div>
+      <div class="card">
+        <img src="images/Dates.avif" alt="Dates">
+        <h3>Dates</h3>
+        <p>Premium Egyptian dates, natural and sweet. Ideal for Ramadan season and retail packaging.</p>
+      </div>
+      <div class="card">
+        <img src="images/Grapes.avif" alt="Grapes">
+        <h3>Grapes</h3>
+        <p>Seedless white and red grapes, crisp and flavorful. Packed in punnets for European and Gulf markets.</p>
+      </div>
+      <div class="card">
+        <img src="images/Beans.avif" alt="Beans">
+        <h3>Beans</h3>
+        <p>Fresh and frozen green beans, sorted and trimmed. Great for retail and food service.</p>
+      </div>
+      <div class="card">
+        <img src="images/Mangoes.avif" alt="Mangoes">
+        <h3>Mangoes</h3>
+        <p>Sun-ripened mangoes, fresh or frozen. Sliced and packed for smoothies, juices, and retail.</p>
+      </div>
+    </div>
   </section>
 
   <script>
