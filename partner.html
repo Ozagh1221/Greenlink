@@ -18,6 +18,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       position: relative;
       z-index: 1000;
     }
@@ -29,6 +30,7 @@
     nav {
       display: flex;
       gap: 1rem;
+      align-items: center;
     }
 
     nav a {
@@ -98,6 +100,7 @@
       max-width: 800px;
       margin: auto;
       text-align: center;
+      background-color: #fff;
     }
 
     form {
@@ -136,13 +139,16 @@
       form {
         width: 100%;
       }
+
+      .section {
+        padding: 2rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-  <div class="header-container">
     <div class="logo">
       <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
     </div>
@@ -160,20 +166,17 @@
       <div></div>
       <div></div>
     </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="close-menu" onclick="toggleMenu()">&times;</div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="partner.html">Become a Partner</a>
+    <a href="contact.html" class="cta-button">Contact Us</a>
   </div>
-</header>
-
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-menu">
-  <div class="close-menu" onclick="toggleMenu()">&times;</div>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="about.html">About</a>
-  <a href="partner.html">Become a Partner</a>
-  <a href="contact.html" class="cta-button">Contact Us</a>
-</div>
-
-
 
   <section class="section">
     <h2>Become a Partner</h2>
