@@ -11,22 +11,33 @@
       background-color: #f0ede7;
       color: #333;
     }
+
     header {
       background-color: #e3e0d9;
       padding: 1rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
+
     header img {
       height: 90px;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     nav a {
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       color: #000;
       text-decoration: none;
       font-weight: 500;
     }
+
     .cta-button {
       background-color: #2f5d3e;
       color: white;
@@ -35,11 +46,13 @@
       border-radius: 3px;
       font-weight: bold;
     }
+
     .contact-section {
       padding: 3rem 2rem;
       background-color: #fff;
       text-align: center;
     }
+
     .contact-section form {
       max-width: 500px;
       margin: 2rem auto;
@@ -47,6 +60,7 @@
       flex-direction: column;
       gap: 1rem;
     }
+
     .contact-section input,
     .contact-section textarea {
       padding: 0.7rem;
@@ -54,6 +68,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     .contact-section button {
       background-color: #2f5d3e;
       color: white;
@@ -62,39 +77,29 @@
       border-radius: 3px;
       cursor: pointer;
       font-size: 1rem;
-      @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    }
 
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-    margin-top: 1rem;
-  }
+    /* ✅ Mobile responsive styles */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+      nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin-top: 1rem;
+      }
 
-  .hero-text {
-    max-width: 100%;
-  }
+      nav a {
+        margin: 0.5rem 1.5rem;
+      }
 
-  .hero-img img {
-    width: 80%;
-    border-radius: 100px;
-    margin-top: 1rem;
-  }
-
-  form {
-    width: 100%;
-  }
-}
+      .contact-section form {
+        width: 90%;
+      }
     }
   </style>
 </head>
