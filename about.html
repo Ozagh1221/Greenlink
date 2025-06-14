@@ -214,35 +214,139 @@
     </p>
   </section>
 
-  <!-- Footer Section -->
-<footer style="background-color: #064b1e; color: white; padding: 3rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
-  <div style="flex: 1; min-width: 250px; text-align: center; margin-bottom: 2rem;">
-    <img src="images/Logo W.png" alt="Greenlinx Logo" style="height: 80px; margin-bottom: 1rem;">
-    <h3 style="margin: 0 0 1rem;">Request a Quote</h3>
-    <form style="display: flex; justify-content: center;">
-      <input type="email" placeholder="Your Email" style="padding: 0.8rem; border: none; border-radius: 50px 0 0 50px; width: 200px;">
-      <button type="submit" style="padding: 0.8rem 1.2rem; background-color: #d9781f; color: white; border: none; border-radius: 0 50px 50px 0; cursor: pointer; font-weight: bold;">GO</button>
-    </form>
-  </div>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
 
-  <div style="flex: 1; min-width: 200px; margin-bottom: 2rem;">
-    <h3 style="border-bottom: 1px solid white; padding-bottom: 0.5rem;">Explore</h3>
-    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-      <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-      <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
-      <li><a href="products.html" style="color: white; text-decoration: none;">Products</a></li>
-      <li><a href="partner.html" style="color: white; text-decoration: none;">Become a Partner</a></li>
-      <li><a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a></li>
-    </ul>
-  </div>
+    <!-- Column 1: Logo & Quote Form -->
+    <div class="footer-col">
+      <img src="images/Logo W.png" alt="Greenlinx Logo" class="footer-logo">
+      <h3>Request a Quote</h3>
+      <form class="quote-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">GO</button>
+      </form>
+    </div>
 
-  <div style="flex: 2; min-width: 280px;">
-    <h3 style="border-bottom: 1px solid white; padding-bottom: 0.5rem;">Contact Info</h3>
-    <p><strong>ADDRESS:</strong> Head Office: 9 Ibrahim Sherief St, Kiroseiz Buildings, Block G, Alexandria, Egypt</p>
-    <p><strong>EMAIL:</strong> <a href="mailto:sales@green-linx.com" style="color: white;">sales@green-linx.com</a></p>
-    <p><strong>PHONE:</strong> +20 35433981</p>
+    <!-- Column 2: Navigation Links -->
+    <div class="footer-col">
+      <h3>Explore</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="partner.html">Become a Partner</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p><strong>ADDRESS:</strong> Head Office: 15 Bostan St, Arkan, Block G, Giza, Egypt</p>
+      <p><strong>EMAIL:</strong> <a href="mailto:sales@green-linx.com">sales@green-linx.com</a></p>
+      <p><strong>PHONE:</strong> +20 01274033336</p>
+    </div>
+
   </div>
 </footer>
+
+<!-- Footer Styles -->
+<style>
+  .footer {
+    background-color: #2f5d3e;
+    color: white;
+    padding: 3rem 2rem;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-col {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer-logo {
+    height: 80px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .quote-form {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .quote-form input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    width: 200px;
+  }
+
+  .quote-form button {
+    padding: 0.8rem 1.2rem;
+    background-color: #d9781f;
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .footer-col h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    line-height: 2;
+  }
+
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .quote-form {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quote-form input,
+    .quote-form button {
+      width: 100%;
+      border-radius: 50px;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-form button {
+      border-radius: 50px;
+    }
+  }
+</style>
+
 
   <script>
     function toggleMenu() {
