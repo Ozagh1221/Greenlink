@@ -15,11 +15,13 @@
     header {
       background-color: #e3e0d9;
       padding: 1rem 2rem;
+    }
+
+    .header-container {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      position: relative;
-      z-index: 1000;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .logo img {
@@ -29,6 +31,7 @@
     nav {
       display: flex;
       gap: 1rem;
+      align-items: center;
     }
 
     nav a {
@@ -153,25 +156,24 @@
 <body>
 
   <header>
-  <div class="header-container">
-    <div class="logo">
-      <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="partner.html">Become a Partner</a>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="partner.html">Become a Partner</a>
-      <a href="contact.html" class="cta-button">Contact Us</a>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-</header>
-
+  </header>
 
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="mobile-menu">
