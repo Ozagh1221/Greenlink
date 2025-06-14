@@ -18,23 +18,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      position: relative;
+      z-index: 1000;
     }
 
-    header img {
+    .logo img {
       height: 90px;
     }
 
     nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 1rem;
     }
 
     nav a {
-      margin: 0.5rem 1rem;
-      color: #000;
       text-decoration: none;
+      color: #000;
       font-weight: 500;
     }
 
@@ -45,6 +44,52 @@
       text-decoration: none;
       border-radius: 3px;
       font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #333;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #e3e0d9;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .mobile-menu a {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .mobile-menu .cta-button {
+      margin-top: 2rem;
+    }
+
+    .close-menu {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
     }
 
     .contact-section {
@@ -79,22 +124,13 @@
       font-size: 1rem;
     }
 
-    /* ✅ Mobile responsive styles */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       nav {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-        margin-top: 1rem;
+        display: none;
       }
 
-      nav a {
-        margin: 0.5rem 1.5rem;
+      .hamburger {
+        display: flex;
       }
 
       .contact-section form {
@@ -104,8 +140,12 @@
   </style>
 </head>
 <body>
+
   <header>
-    <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo"></a>
+    <div class="logo">
+      <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
@@ -113,7 +153,23 @@
       <a href="partner.html">Become a Partner</a>
       <a href="contact.html" class="cta-button">Contact Us</a>
     </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="close-menu" onclick="toggleMenu()">&times;</div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="partner.html">Become a Partner</a>
+    <a href="contact.html" class="cta-button">Contact Us</a>
+  </div>
 
   <section class="contact-section">
     <h2>Contact Us</h2>
@@ -126,5 +182,13 @@
     </form>
     <p>Or email us at <strong>sales@green-linx.com</strong></p>
   </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
 </body>
 </html>
