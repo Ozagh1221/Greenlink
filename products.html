@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Greenlinx | Our Products</title>
+  <title>Products | Greenlinx</title>
   <style>
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #f0ede7;
       color: #333;
+      background-color: #f0ede7;
     }
 
     header {
       background-color: #e3e0d9;
       padding: 1rem 2rem;
+    }
+
+    .header-container {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      position: relative;
-      z-index: 1000;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .logo img {
@@ -28,7 +30,8 @@
 
     nav {
       display: flex;
-      gap: 1rem;
+      align-items: center;
+      gap: 1.5rem;
     }
 
     nav a {
@@ -40,9 +43,9 @@
     .cta-button {
       background-color: #2f5d3e;
       color: white;
-      padding: 0.6rem 1rem;
-      border-radius: 3px;
+      padding: 0.5rem 1rem;
       text-decoration: none;
+      border-radius: 3px;
       font-weight: bold;
     }
 
@@ -93,35 +96,21 @@
       cursor: pointer;
     }
 
-    .section {
-      padding: 2rem;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      width: 300px;
+    .products-section {
+      padding: 4rem 2rem;
       text-align: center;
     }
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
+    .products-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
 
-    .card h3 {
-      margin-top: 1rem;
+    .products-section p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
 
     @media (max-width: 768px) {
@@ -133,13 +122,12 @@
         display: flex;
       }
 
-      .products {
-        flex-direction: column;
-        align-items: center;
+      .products-section h1 {
+        font-size: 2rem;
       }
 
-      .card {
-        width: 90%;
+      .products-section p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -147,78 +135,42 @@
 <body>
 
   <header>
-  <div class="header-container">
-    <div class="logo">
-      <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
-    </div>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="partner.html">Become a Partner</a>
-      <a href="contact.html" class="cta-button">Contact Us</a>
-    </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="partner.html">Become a Partner</a>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+      </nav>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="close-menu" onclick="toggleMenu()">&times;</div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="partner.html">Become a Partner</a>
+    <a href="contact.html" class="cta-button">Contact Us</a>
   </div>
-</header>
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-menu">
-  <div class="close-menu" onclick="toggleMenu()">&times;</div>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="about.html">About</a>
-  <a href="partner.html">Become a Partner</a>
-  <a href="contact.html" class="cta-button">Contact Us</a>
-</div>
-
-
-
-  <section class="section">
-    <h2>Our Products</h2>
-    <div class="products">
-      <div class="card">
-        <img src="images/Oranges.avif" alt="Oranges">
-        <h3>Oranges</h3>
-        <p>Egyptian Valencia oranges, juicy and sweet. Exported in bulk cartons, ideal for juice or retail.</p>
-      </div>
-      <div class="card">
-        <img src="images/Potatoes.avif" alt="Potatoes">
-        <h3>Potatoes</h3>
-        <p>High-quality Egyptian potatoes, washed and graded for international export. Multiple sizes available.</p>
-      </div>
-      <div class="card">
-        <img src="images/Onions.avif" alt="Onions">
-        <h3>Onions</h3>
-        <p>Golden and red onions, freshly harvested. Exported in mesh bags with long shelf life.</p>
-      </div>
-      <div class="card">
-        <img src="images/Dates.avif" alt="Dates">
-        <h3>Dates</h3>
-        <p>Premium Egyptian dates, natural and sweet. Ideal for Ramadan season and retail packaging.</p>
-      </div>
-      <div class="card">
-        <img src="images/Grapes.avif" alt="Grapes">
-        <h3>Grapes</h3>
-        <p>Seedless white and red grapes, crisp and flavorful. Packed in punnets for European and Gulf markets.</p>
-      </div>
-      <div class="card">
-        <img src="images/Beans.avif" alt="Beans">
-        <h3>Beans</h3>
-        <p>Fresh and frozen green beans, sorted and trimmed. Great for retail and food service.</p>
-      </div>
-      <div class="card">
-        <img src="images/Mangoes.avif" alt="Mangoes">
-        <h3>Mangoes</h3>
-        <p>Sun-ripened mangoes, fresh or frozen. Sliced and packed for smoothies, juices, and retail.</p>
-      </div>
-    </div>
+  <!-- Products Section -->
+  <section class="products-section">
+    <h1>Our Products</h1>
+    <p>We offer a premium selection of Egypt’s finest fruits and vegetables — both fresh and frozen — grown with care and delivered with precision.</p>
+    <!-- You can later add product cards here -->
   </section>
 
   <script>
