@@ -100,7 +100,7 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding: 2rem 2rem 1rem;
+      padding: 2rem;
     }
 
     .hero-text {
@@ -121,6 +121,40 @@
       width: 400px;
       height: auto;
       border-radius: 200px 0 0 200px;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .products-preview, .certifications {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .product-card, .cert-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 250px;
+      cursor: pointer;
+    }
+
+    .product-card img, .cert-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .about-brief p {
+      max-width: 700px;
+      margin: 0 auto 1rem;
+      font-size: 1.1rem;
     }
 
     @media (max-width: 768px) {
@@ -146,58 +180,95 @@
         border-radius: 100px;
         margin-top: 1rem;
       }
-
-      form {
-        width: 100%;
-      }
     }
   </style>
 </head>
 <body>
 
   <header>
-  <div class="header-container">
-    <div class="logo">
-      <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
-    </div>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><img src="Logo W.png" alt="Greenlinx Logo" /></a>
+      </div>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="partner.html">Become a Partner</a>
-      <a href="contact.html" class="cta-button">Contact Us</a>
-    </nav>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="partner.html">Become a Partner</a>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+      </nav>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
+  </header>
+
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="close-menu" onclick="toggleMenu()">&times;</div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="partner.html">Become a Partner</a>
+    <a href="contact.html" class="cta-button">Contact Us</a>
   </div>
-</header>
-
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="mobile-menu">
-  <div class="close-menu" onclick="toggleMenu()">&times;</div>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="about.html">About</a>
-  <a href="partner.html">Become a Partner</a>
-  <a href="contact.html" class="cta-button">Contact Us</a>
-</div>
 
   <section class="hero">
     <div class="hero-text">
       <h1>Fresh & Frozen Produce — Expertly Delivered</h1>
-      <p>Take a minute to write an introduction that is short, sweet, and to the point. If you sell something, use this space to describe it in detail and tell us why we should make a purchase. Tap into your creativity. You've got this.</p>
+      <p>Take a minute to write an introduction that is short, sweet, and to the point.</p>
     </div>
     <div class="hero-img">
       <img src="images/Oranges.avif" alt="Oranges">
     </div>
   </section>
 
-  <section id="contact" style="padding: 3rem 2rem; background-color: #fff; text-align: center;">
+  <section class="section">
+    <h2>Explore Our Products</h2>
+    <div class="products-preview">
+      <div class="product-card" onclick="location.href='products.html'">
+        <img src="images/Potatoes.avif" alt="Potatoes">
+        <p>Potatoes</p>
+      </div>
+      <div class="product-card" onclick="location.href='products.html'">
+        <img src="images/Grapes.avif" alt="Grapes">
+        <p>Grapes</p>
+      </div>
+      <div class="product-card" onclick="location.href='products.html'">
+        <img src="images/Mangoes.avif" alt="Mangoes">
+        <p>Mangoes</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-brief">
+    <h2>Who We Are</h2>
+    <p>Greenlinx exists to elevate Egypt’s agricultural potential and connect it to the world. We partner with trusted farmers and producers to export top-quality fruits and vegetables across the Gulf, Europe, and Africa.</p>
+    <a href="about.html" class="cta-button">Learn More</a>
+  </section>
+
+  <section class="section">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="cert-card">
+        <img src="images/cert-placeholder.png" alt="Cert 1">
+        <p>ISO 22000</p>
+      </div>
+      <div class="cert-card">
+        <img src="images/cert-placeholder.png" alt="Cert 2">
+        <p>Global GAP</p>
+      </div>
+      <div class="cert-card">
+        <img src="images/cert-placeholder.png" alt="Cert 3">
+        <p>Organic Certified</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="background-color: #fff;">
     <h2>Contact Us</h2>
     <p>Reach out to get a custom quote or ask us about sourcing, logistics, or partnerships.</p>
     <form action="https://formspree.io/f/xjkrwnny" method="POST" style="max-width: 500px; margin: 2rem auto; display: flex; flex-direction: column; gap: 1rem;">
