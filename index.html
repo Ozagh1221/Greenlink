@@ -294,7 +294,6 @@
     </div>
   </section>
 
-
 <!-- Footer Section -->
 <footer class="footer">
   <div class="footer-container">
@@ -303,8 +302,9 @@
     <div class="footer-col">
       <img src="images/Logo WO.png" alt="Greenlinx Logo" class="footer-logo">
       <h3>Request a Quote</h3>
-      <form class="quote-form">
-        <input type="email" placeholder="Your Email" required>
+      <form class="quote-form" action="https://formspree.io/f/xjkrwnny" method="POST">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="hidden" name="message" value="Requesting a quote from the footer form.">
         <button type="submit">GO</button>
       </form>
     </div>
@@ -331,6 +331,7 @@
 
   </div>
 </footer>
+
 
 <!-- Footer Styles -->
 <style>
