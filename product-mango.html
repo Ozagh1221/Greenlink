@@ -130,7 +130,104 @@
   </section>
 
   <!-- Reuse your site footer include -->
-  <!-- #include file="partials/footer.html" or paste your footer block here -->
+ </footer>
+
+<!-- Footer Styles -->
+<style>
+  .footer {
+    background-color: #2f5d3e;
+    color: white;
+    padding: 3rem 2rem;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .footer-col {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .footer-logo {
+    height: 80px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .quote-form {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .quote-form input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    width: 200px;
+  }
+
+  .quote-form button {
+    padding: 0.8rem 1.2rem;
+    background-color: #d9781f;
+    color: white;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .footer-col h3 {
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    line-height: 2;
+  }
+
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .quote-form {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quote-form input,
+    .quote-form button {
+      width: 100%;
+      border-radius: 50px;
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-form button {
+      border-radius: 50px;
+    }
+  }
+</style>
+
 
 </body>
 </html>
