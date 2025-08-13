@@ -3,40 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{PRODUCT}} | Greenlinx</title>
-  <meta name="description" content="{{PRODUCT}} from Egypt — premium quality, export-ready. Fresh & frozen options, strict QC, and reliable logistics from Greenlinx." />
+  <title>Mango | Greenlinx</title>
+  <meta name="description" content="Egyptian mangoes — fresh and IQF formats, premium quality, strict QC, reliable export logistics from Greenlinx." />
+  <!-- Reuse your site CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Breadcrumb -->
+  <!-- Breadcrumb (optional; matches template structure) -->
   <nav class="breadcrumb container">
-    <a href="index.html">Home</a> › <a href="products.html">Products</a> › <span>{{PRODUCT}}</span>
+    <a href="index.html">Home</a> › <a href="products.html">Products</a> › <span>Mango</span>
   </nav>
 
   <!-- Hero -->
   <header class="product-hero">
     <div class="container hero-grid">
       <div class="hero-text">
-        <h1>{{PRODUCT}}</h1>
-        <p class="lead">{{SHORT_INTRO}}</p>
+        <h1>Mango</h1>
+        <p class="lead">Egyptian mangoes—rich, fragrant, and export-ready in fresh and IQF formats.</p>
         <ul class="hero-highlights">
-          <li>Grade: {{GRADE}}</li>
-          <li>Formats: {{FORMATS}}</li>
+          <li>Grade: Export Grade I / II</li>
+          <li>Formats: Fresh whole, IQF cubes & slices</li>
           <li>Certifications: GLOBALG.A.P / ISO / HACCP (suppliers)</li>
         </ul>
         <a class="btn btn-primary" href="#quote">Request a Quote</a>
       </div>
       <figure class="hero-media">
-        <img src="images/products/{{IMAGE_FILE}}" alt="{{PRODUCT}} by Greenlinx" loading="eager">
+        <!-- Put your image at images/products/mango-hero.jpg -->
+        <img src="images/products/mango-hero.jpg" alt="Mango by Greenlinx" loading="eager">
       </figure>
     </div>
   </header>
 
-  <!-- Product intro -->
+  <!-- Product overview -->
   <section class="section container">
     <h2>Product Overview</h2>
-    <p>{{LONG_INTRO}}</p>
+    <p>
+      We supply premium Egyptian mango varieties selected for sweetness, texture, and sturdiness in transit.
+      Fresh options are harvested at optimal maturity; IQF cubes and slices are processed rapidly to lock in flavor,
+      color, and nutrients—ideal for retail, foodservice, and industrial applications.
+    </p>
   </section>
 
   <!-- Specs -->
@@ -45,17 +51,21 @@
       <h3>Specifications</h3>
       <ul class="spec-list">
         <li>Origin: Egypt (Nile Delta & key growing regions)</li>
-        <li>Processing: {{PROCESSING}}</li>
-        <li>Calibers / Cuts: {{CALIBERS}}</li>
+        <li>Processing: Fresh hand-picked / IQF cubes 10–20 mm, slices</li>
+        <li>Calibers / Cuts: Fresh 5–15 cm; IQF 10×10–20×20 mm; custom cuts on request</li>
         <li>QC: Metal detection, foreign-matter control, temperature checks</li>
-        <li>Shelf Life: {{SHELF_LIFE}}</li>
-        <li>Storage: {{STORAGE}}</li>
+        <li>Shelf Life: Fresh 10–14 days (2–4 °C); IQF 24 months (≤ −18 °C)</li>
+        <li>Storage: Fresh 2–4 °C; IQF −18 °C</li>
       </ul>
     </div>
     <div>
       <h3>Varieties / Grades</h3>
       <ul class="spec-list">
-        {{VARIETIES_LIST}}
+        <li>Keitt</li>
+        <li>Kent</li>
+        <li>Naomi</li>
+        <li>Tommy Atkins</li>
+        <li>Grade I / Grade II</li>
       </ul>
     </div>
   </section>
@@ -71,24 +81,25 @@
           </tr>
         </thead>
         <tbody>
-          {{PACKAGING_ROWS}}
+          <tr><td>Retail (IQF)</td><td>Pouch</td><td>400g–1kg</td><td>Printed or plain; euro slot optional</td></tr>
+          <tr><td>Foodservice (IQF)</td><td>Polybag in carton</td><td>10kg</td><td>Outer: 5-ply export carton</td></tr>
+          <tr><td>Fresh</td><td>Carton</td><td>4–10kg</td><td>Ventilated; dividers by caliber</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- Harvest Calendar -->
+  <!-- Harvest & Availability -->
   <section class="section container">
     <h3>Harvest & Availability</h3>
     <div class="calendar">
-      <!-- Mark active months with class 'on' -->
       <div class="months">
-        <span class="{{M01}}">Jan</span><span class="{{M02}}">Feb</span><span class="{{M03}}">Mar</span>
-        <span class="{{M04}}">Apr</span><span class="{{M05}}">May</span><span class="{{M06}}">Jun</span>
-        <span class="{{M07}}">Jul</span><span class="{{M08}}">Aug</span><span class="{{M09}}">Sep</span>
-        <span class="{{M10}}">Oct</span><span class="{{M11}}">Nov</span><span class="{{M12}}">Dec</span>
+        <span class="off">Jan</span><span class="off">Feb</span><span class="off">Mar</span>
+        <span class="off">Apr</span><span class="off">May</span><span class="off">Jun</span>
+        <span class="on">Jul</span><span class="on">Aug</span><span class="on">Sep</span>
+        <span class="on">Oct</span><span class="off">Nov</span><span class="off">Dec</span>
       </div>
-      <p class="note">Frozen/IQF available year‑round.</p>
+      <p class="note">Frozen/IQF available year-round.</p>
     </div>
   </section>
 
@@ -106,10 +117,10 @@
   <!-- CTA -->
   <section id="quote" class="section cta">
     <div class="container cta-box">
-      <h3>Ready to order {{PRODUCT}}?</h3>
+      <h3>Ready to order Mango?</h3>
       <p>Tell us your specs and destination—we’ll respond fast.</p>
       <form class="quote-form" action="https://formspree.io/f/xjkrwnny" method="POST">
-        <input type="hidden" name="product" value="{{PRODUCT}}">
+        <input type="hidden" name="product" value="Mango">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="4" placeholder="Order specs (quantity, pack, destination)"></textarea>
@@ -118,9 +129,8 @@
     </div>
   </section>
 
-  <!-- Footer (re-use your site footer) -->
-  <!-- include footer.html -->
+  <!-- Reuse your site footer include -->
+  <!-- #include file="partials/footer.html" or paste your footer block here -->
 
 </body>
 </html>
-
