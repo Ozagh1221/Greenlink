@@ -1,0 +1,23 @@
+<!-- Replace placeholders per the template -->
+<title>Mango | Greenlinx</title>
+<!-- SHORT_INTRO -->
+<p class="lead">Egyptian mangoes—rich, fragrant, and export‑ready in fresh and IQF formats.</p>
+<!-- LONG_INTRO -->
+<p>We supply premium Egyptian mango varieties selected for sweetness, texture, and sturdiness in transit. Fresh options are harvested at optimal maturity; IQF cubes and slices are processed rapidly to lock in flavor, color, and nutrients—ideal for retail, foodservice, and industrial applications.</p>
+<!-- PROCESSING/CALIBERS/SHELF/STORAGE -->
+<li>Processing: Fresh hand‑picked / IQF cubes 10–20 mm, slices</li>
+<li>Calibers / Cuts: Fresh 5–15 cm; IQF 10×10–20×20 mm; custom cuts on request</li>
+<li>Shelf Life: Fresh 10–14 days (2–4 °C); IQF 24 months (≤−18 °C)</li>
+<li>Storage: Fresh 2–4 °C; IQF −18 °C</li>
+<!-- VARIETIES_LIST -->
+<li>Keitt</li><li>Kent</li><li>Naomi</li><li>Tommy Atkins</li>
+<!-- PACKAGING_ROWS -->
+<tr><td>Retail (IQF)</td><td>Pouch</td><td>400g–1kg</td><td>Printed or plain; euro slot optional</td></tr>
+<tr><td>Foodservice (IQF)</td><td>Polybag in carton</td><td>10kg</td><td>Outer: 5‑ply export carton</td></tr>
+<tr><td>Fresh</td><td>Carton</td><td>4–10kg</td><td>Ventilated; dividers by caliber</td></tr>
+<!-- MONTH FLAGS -->
+<!-- Peak fresh: Jul–Oct in Egypt -->
+<span class="off">Jan</span><span class="off">Feb</span><span class="off">Mar</span>
+<span class="off">Apr</span><span class="off">May</span><span class="off">Jun</span>
+<span class="on">Jul</span><span class="on">Aug</span><span class="on">Sep</span>
+<span class="on">Oct</span><span class="off">Nov</span><span class="off">Dec</span>
