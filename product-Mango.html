@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{PRODUCT}} | Greenlinx</title>
+  <meta name="description" content="{{PRODUCT}} from Egypt — premium quality, export-ready. Fresh & frozen options, strict QC, and reliable logistics from Greenlinx." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb container">
+    <a href="index.html">Home</a> › <a href="products.html">Products</a> › <span>{{PRODUCT}}</span>
+  </nav>
+
+  <!-- Hero -->
+  <header class="product-hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>{{PRODUCT}}</h1>
+        <p class="lead">{{SHORT_INTRO}}</p>
+        <ul class="hero-highlights">
+          <li>Grade: {{GRADE}}</li>
+          <li>Formats: {{FORMATS}}</li>
+          <li>Certifications: GLOBALG.A.P / ISO / HACCP (suppliers)</li>
+        </ul>
+        <a class="btn btn-primary" href="#quote">Request a Quote</a>
+      </div>
+      <figure class="hero-media">
+        <img src="images/products/{{IMAGE_FILE}}" alt="{{PRODUCT}} by Greenlinx" loading="eager">
+      </figure>
+    </div>
+  </header>
+
+  <!-- Product intro -->
+  <section class="section container">
+    <h2>Product Overview</h2>
+    <p>{{LONG_INTRO}}</p>
+  </section>
+
+  <!-- Specs -->
+  <section class="section container specs-grid">
+    <div>
+      <h3>Specifications</h3>
+      <ul class="spec-list">
+        <li>Origin: Egypt (Nile Delta & key growing regions)</li>
+        <li>Processing: {{PROCESSING}}</li>
+        <li>Calibers / Cuts: {{CALIBERS}}</li>
+        <li>QC: Metal detection, foreign-matter control, temperature checks</li>
+        <li>Shelf Life: {{SHELF_LIFE}}</li>
+        <li>Storage: {{STORAGE}}</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Varieties / Grades</h3>
+      <ul class="spec-list">
+        {{VARIETIES_LIST}}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Packaging -->
+  <section class="section container">
+    <h3>Packaging</h3>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Use</th><th>Pack</th><th>Net Weight</th><th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{PACKAGING_ROWS}}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Harvest Calendar -->
+  <section class="section container">
+    <h3>Harvest & Availability</h3>
+    <div class="calendar">
+      <!-- Mark active months with class 'on' -->
+      <div class="months">
+        <span class="{{M01}}">Jan</span><span class="{{M02}}">Feb</span><span class="{{M03}}">Mar</span>
+        <span class="{{M04}}">Apr</span><span class="{{M05}}">May</span><span class="{{M06}}">Jun</span>
+        <span class="{{M07}}">Jul</span><span class="{{M08}}">Aug</span><span class="{{M09}}">Sep</span>
+        <span class="{{M10}}">Oct</span><span class="{{M11}}">Nov</span><span class="{{M12}}">Dec</span>
+      </div>
+      <p class="note">Frozen/IQF available year‑round.</p>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section container certs">
+    <h3>Quality & Certifications</h3>
+    <ul class="cert-list">
+      <li>GLOBALG.A.P</li>
+      <li>ISO 22000</li>
+      <li>HACCP</li>
+      <li>Halal / Kosher (where applicable)</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section id="quote" class="section cta">
+    <div class="container cta-box">
+      <h3>Ready to order {{PRODUCT}}?</h3>
+      <p>Tell us your specs and destination—we’ll respond fast.</p>
+      <form class="quote-form" action="https://formspree.io/f/xjkrwnny" method="POST">
+        <input type="hidden" name="product" value="{{PRODUCT}}">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Order specs (quantity, pack, destination)"></textarea>
+        <button type="submit" class="btn btn-primary">Request a Quote</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (re-use your site footer) -->
+  <!-- include footer.html -->
+
+</body>
+</html>
+
